@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qrmenupro.netlify.app/sitemap.xml
+Sitemap: https://menudigital.guidify.app/sitemap.xml

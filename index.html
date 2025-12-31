@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Menu Maker Pro — Midnight Luxury Edition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplikasi pembuat menu digital QR Code dan Tent Card otomatis. Desain mewah (Midnight Luxury), hemat biaya cetak, dan update menu realtime.">
+
+  <meta name="google-site-verification" content="njIkUDWT97ucMoKWITvNsIlrf_hy8i9DmwQhoPbelQw" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            onyx: '#0f172a',      /* Hitam Mewah (Background Utama) */
+            charcoal: '#1e293b',  /* Hitam Sekunder */
+            gold: '#d4af37',      /* Emas (Aksen Premium) */
+            'gold-light': '#fcd34d',
+            danger: '#dc2626'
+          },
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            serif: ['Cinzel', 'serif']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<div id="sticky-timer" class="fixed top-0 left-0 w-full bg-gold text-onyx text-center py-2 z-50 shadow-md hidden border-b-2 border-onyx">
+  <p class="text-sm md:text-base font-bold">
+    👑 PROMO RESTO MODERN BERAKHIR: 
+    <span id="timer-display" class="bg-onyx text-gold px-2 py-0.5 rounded ml-2 font-mono text-lg">02:00:00</span>
+  </p>
+</div>
+
+<div class="h-10"></div>
+
+<section class="bg-onyx text-white py-20 px-6 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="inline-block bg-white/5 border border-gold text-gold px-6 py-1 rounded-full text-xs font-bold mb-8 tracking-[0.2em] uppercase shadow-lg backdrop-blur-md">
+      ✦ The Future of Fine Dining
+    </div>
+    
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 font-serif">
+      Upgrade Restoran Anda <br>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">Menjadi Lebih Mewah</span>
+    </h1>
+
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+      Tinggalkan buku menu fisik yang kusam. Beralihlah ke <strong>Menu Digital QR</strong> yang elegan. Update harga kapan saja, tanpa biaya cetak ulang.
+    </p>
+
+    <div class="mb-10 p-6 bg-charcoal/80 rounded-xl inline-block backdrop-blur-sm border border-gold/40 shadow-2xl relative">
+      <div class="absolute -top-3 -right-3 bg-gold text-onyx text-[10px] font-bold px-2 py-1 rounded">BEST VALUE</div>
+      <p class="text-xs text-gray-400 mb-2 uppercase tracking-widest font-bold">Investasi Sekali Bayar</p>
+      <div class="flex items-center justify-center gap-5">
+        <span class="line-through text-gray-500 text-xl decoration-gold/50 font-serif">Rp 249.000</span>
+        <span class="text-gold text-5xl font-serif font-bold">Rp 49.000</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-5 justify-center">
+      <a href="#checkout" class="bg-gradient-to-b from-gold to-yellow-600 text-onyx px-8 py-4 rounded font-bold text-xl hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition transform hover:-translate-y-1 flex items-center justify-center gap-3 uppercase tracking-wide">
+        <span>🍽️</span> Modernisasi Sekarang
+      </a>
+      <a href="#demo" class="border border-gray-600 text-gray-300 px-8 py-4 rounded font-bold text-xl hover:bg-white/5 transition uppercase tracking-wide">
+        Lihat Preview
+      </a>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-8 flex justify-center gap-6 font-serif tracking-wider">
+      <span>[ QR GENERATOR ]</span>
+      <span>[ TENT CARD READY ]</span>
+      <span>[ WIFI INFO ]</span>
+    </p>
+  </div>
+</section>
+
+<section class="bg-white border-b border-gray-200 py-12 shadow-sm relative z-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center divide-x divide-gray-100">
+      
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-onyx mb-1 font-serif">1.200+</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Mitra Resto/Kafe</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-gold mb-1 font-serif">90%</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Hemat Biaya Cetak</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-onyx mb-1 font-serif">50k+</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Scan Pelanggan/Bln</span>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-gold mb-1 font-serif">4.9/5</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Rating Owner</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="py-20 px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4 text-onyx font-serif">Elegan di HP, Mewah di Meja</h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Satu aplikasi untuk mengatur tampilan menu di HP pelanggan sekaligus mencetak Tent Card (Standee) untuk meja.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <div class="group relative rounded-xl shadow-2xl border border-gray-200 bg-white overflow-hidden">
+        <div class="absolute top-0 left-0 bg-onyx text-gold text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Smart Editor</div>
+        <img src="preview-menu.jpg" alt="Editor Menu Digital" class="w-full h-auto transform group-hover:scale-102 transition duration-700">
+      </div>
+      
+      <div class="group relative rounded-xl shadow-2xl border border-gray-200 bg-white overflow-hidden">
+        <div class="absolute top-0 left-0 bg-onyx text-gold text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Tampilan HP Pelanggan</div>
+        <img src="preview-menu1.jpg" alt="Preview Menu di HP" class="w-full h-auto transform group-hover:scale-102 transition duration-700">
+      </div>
+
+      <div class="group relative rounded-xl shadow-2xl border border-gray-200 bg-white overflow-hidden">
+        <div class="absolute top-0 left-0 bg-onyx text-gold text-xs px-3 py-1 font-bold z-10 uppercase tracking-wider">Cetak Tent Card (A4)</div>
+        <img src="preview-menu2.jpg" alt="Hasil Cetak Tent Card" class="w-full h-auto transform group-hover:scale-102 transition duration-700">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-16 text-onyx font-serif">
+      Revolusi <span class="text-gold">Digital Dining</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-8">
+        
+        <div class="flex gap-5">
+          <div class="bg-onyx p-3 rounded h-fit text-gold shadow-lg">
+            <i class="fa-solid fa-qrcode text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-onyx font-serif">QR Code Otomatis</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Link menu Anda otomatis diubah menjadi QR Code unik. Tidak perlu repot pakai aplikasi generator lain.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-5">
+          <div class="bg-onyx p-3 rounded h-fit text-gold shadow-lg">
+            <i class="fa-solid fa-print text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-onyx font-serif">Cetak Tent Card Instan</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Fitur spesial untuk mencetak kertas A4 menjadi "Tent Card" (Standee Segitiga) yang siap pajang di meja pelanggan.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-5">
+          <div class="bg-onyx p-3 rounded h-fit text-gold shadow-lg">
+            <i class="fa-solid fa-mobile-screen text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-onyx font-serif">Real-time Mobile Preview</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Lihat langsung bagaimana menu Anda tampil di layar HP pelanggan saat Anda mengeditnya. WYSIWYG (What You See Is What You Get).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-onyx p-8 rounded-xl shadow-2xl border border-gray-700 text-white">
+        <h4 class="font-bold mb-6 text-center text-gold font-serif border-b border-gray-700 pb-4 tracking-widest">MENU FISIK vs DIGITAL MENU PRO</h4>
+        <div class="space-y-5 text-sm">
+          <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+            <span class="text-gray-400">Update Harga</span>
+            <span class="text-red-500 font-bold">❌ Cetak Ulang (Mahal)</span>
+          </div>
+           <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+            <span class="text-gray-400">Kondisi Fisik</span>
+            <span class="text-red-500 font-bold">❌ Cepat Kotor/Kusam</span>
+          </div>
+           <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+            <span class="text-gray-400">Akses WiFi</span>
+            <span class="text-red-500 font-bold">❌ Tanya Pelayan Terus</span>
+          </div>
+          <div class="bg-gold p-5 rounded text-center mt-6 text-onyx">
+            <p class="font-serif font-bold mb-1 uppercase tracking-widest">Digital Menu Maker</p>
+            <p class="text-lg font-bold">✅ PRAKTIS, HEMAT, MEWAH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-gray-50">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12 text-onyx font-serif">4 Langkah Mudah</h2>
+    
+    <div class="grid md:grid-cols-4 gap-8 text-left">
+      <div class="relative pl-8 border-l border-gold">
+        <div class="absolute -left-3 top-0 bg-onyx text-gold w-6 h-6 rounded-full text-center font-bold text-sm leading-6 border border-gold">1</div>
+        <h4 class="font-bold text-lg mb-2 text-onyx font-serif">Setup Profil</h4>
+        <p class="text-sm text-gray-600"> Isi nama restoran, slogan, dan info WiFi agar pelanggan mudah terhubung.</p>
+      </div>
+      <div class="relative pl-8 border-l border-gold">
+        <div class="absolute -left-3 top-0 bg-onyx text-gold w-6 h-6 rounded-full text-center font-bold text-sm leading-6 border border-gold">2</div>
+        <h4 class="font-bold text-lg mb-2 text-onyx font-serif">Input Menu</h4>
+        <p class="text-sm text-gray-600"> Masukkan kategori (Kopi, Snack) dan item menu beserta harganya.</p>
+      </div>
+      <div class="relative pl-8 border-l border-gold">
+        <div class="absolute -left-3 top-0 bg-onyx text-gold w-6 h-6 rounded-full text-center font-bold text-sm leading-6 border border-gold">3</div>
+        <h4 class="font-bold text-lg mb-2 text-onyx font-serif">Simpan</h4>
+        <p class="text-sm text-gray-600"> Klik tombol SAVE. Data tersimpan aman di browser Anda untuk diedit nanti.</p>
+      </div>
+      <div class="relative pl-8 border-l border-gold">
+        <div class="absolute -left-3 top-0 bg-onyx text-gold w-6 h-6 rounded-full text-center font-bold text-sm leading-6 border border-gold">4</div>
+        <h4 class="font-bold text-lg mb-2 text-onyx font-serif">Cetak QR</h4>
+        <p class="text-sm text-gray-600"> Klik PRINT QR. Cetak di kertas A4, lipat jadi segitiga, taruh di meja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checkout" class="py-24 px-6 bg-onyx text-white text-center relative overflow-hidden">
+   <div class="absolute top-0 right-0 w-80 h-80 bg-gold rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-pulse-slow"></div>
+   <div class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-600 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-pulse-slow"></div>
+
+  <div class="max-w-4xl mx-auto relative z-10">
+    <h2 class="text-3xl md:text-5xl font-bold mb-6 font-serif">Investasi Kecil, Dampak Mewah</h2>
+    <p class="text-gray-400 mb-10 text-lg">
+      Miliki sistem menu digital mandiri tanpa biaya langganan aplikasi POS yang mahal.<br>
+      Cukup bayar sekali, pakai selamanya.
+    </p>
+
+    <div class="bg-charcoal/90 backdrop-blur-md p-10 rounded-xl shadow-2xl max-w-lg mx-auto border border-gold/30 mb-10 relative group hover:border-gold/60 transition-colors">
+      <div class="absolute -top-5 right-4 bg-gold text-onyx px-6 py-2 rounded-sm text-sm font-bold shadow-lg uppercase tracking-wide transform rotate-2">
+        Diskon 80%
+      </div>
+
+      <div class="flex justify-between items-end mb-4 border-b border-gray-600 pb-4">
+        <span class="text-gray-400 font-serif">Harga Normal</span>
+        <span class="line-through text-gray-500 font-serif">Rp 249.000</span>
+      </div>
+      <div class="flex justify-between items-end mb-8">
+        <span class="text-gold font-bold text-xl animate-pulse uppercase tracking-widest">HARGA PROMO</span>
+        <span class="text-6xl font-bold text-white font-serif">Rp 49rb</span>
+      </div>
+      
+      <a href="http://lynk.id/tukastore/33rwkweo4m53/checkout" class="block w-full bg-gradient-to-r from-gold to-yellow-600 text-onyx font-bold text-xl py-5 rounded hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition transform hover:scale-105 uppercase tracking-wide">
+        DOWNLOAD SEKARANG ➔
+      </a>
+      <p class="text-xs text-gray-500 mt-4">Penawaran terbatas untuk 50 pembeli hari ini.</p>
+    </div>
+
+    <div class="text-sm text-gray-400 space-x-6 flex justify-center items-center font-serif">
+      <span class="flex items-center gap-2"><span class="text-gold">★</span> 4.9/5 Rating</span>
+      <span>•</span>
+      <span>Garansi File Works 100%</span>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-black text-gray-600 py-10 text-center text-sm border-t border-gray-900">
+  <p class="font-serif text-gray-500">© 2025 Digital Menu Maker Pro. All Rights Reserved.</p>
+  <p class="mt-3 text-xs">Produk digital untuk bisnis kuliner modern.</p>
+</footer>
+
+<script>
+  // === LOGIKA TIMER (KEY UNIK: MENU) ===
+  document.addEventListener('DOMContentLoaded', function() {
+    const timerElement = document.getElementById('timer-display');
+    const stickyBar = document.getElementById('sticky-timer');
+    // Key storage dibedakan
+    const STORAGE_KEY = 'menu_promo_endtime'; 
+    const DURATION_HOURS = 2;
+
+    stickyBar.classList.remove('hidden');
+
+    let endTime = localStorage.getItem(STORAGE_KEY);
+
+    if (!endTime) {
+      const now = new Date();
+      now.setHours(now.getHours() + DURATION_HOURS);
+      endTime = now.getTime();
+      localStorage.setItem(STORAGE_KEY, endTime);
+    }
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = endTime - now;
+
+      if (distance < 0) {
+        timerElement.innerHTML = "00:00:00";
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timerElement.innerHTML = 
+        (hours < 10 ? "0" + hours : hours) + ":" + 
+        (minutes < 10 ? "0" + minutes : minutes) + ":" + 
+        (seconds < 10 ? "0" + seconds : seconds);
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer(); 
+  });
+</script>
+
+</body>
+</html>
